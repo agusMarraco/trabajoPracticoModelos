@@ -1,0 +1,7 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/webServiceModelos/.vs/webServiceModelos
+/webServiceModelos/webServiceModelos/obj
+/webServiceModelos/webServiceModelos/bin
