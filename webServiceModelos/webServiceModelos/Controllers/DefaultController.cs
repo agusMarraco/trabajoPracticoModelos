@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using webServiceModelos.BLL;
 
 namespace webServiceModelos.Controllers
 {
@@ -14,7 +15,13 @@ namespace webServiceModelos.Controllers
         [HttpGet]
         public ActionResult<String> get()
         {
-            return "HOLA MUNDO";
+            return new JsonResult("HOLA MUNDO");
+        }
+
+        [HttpGet("/data")]
+        public ActionResult<String> getData()
+        {
+            return new JsonResult(GenerateData.execute());
         }
     }
 }

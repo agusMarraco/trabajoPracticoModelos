@@ -14,14 +14,14 @@ namespace webServiceModelos.Controllers
         [HttpGet]
         public ActionResult<String> Get()
         {
-            return  "BIENVENIDO A NUESTRO WEBSERVICE REST, PIDA LA POSICIÓN DE FIBONACCI Y SE LA GENERAMOS";
+            return  new JsonResult("BIENVENIDO A NUESTRO WEBSERVICE REST, PIDA LA POSICIÓN DE FIBONACCI Y SE LA GENERAMOS");
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return getFibonacciNumber(id).ToString();
+            return new JsonResult(getFibonacciNumber(id).ToString());
         }
 
         // POST api/values
